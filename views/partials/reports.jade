@@ -1,0 +1,17 @@
+h1 {{title}}
+
+table.table.table-bordered
+    thead
+        tr
+            th Name
+            th Open
+            th Who
+            th User
+    tbody
+    tr(ng-repeat="report in reports | orderBy:'id'")
+        td 
+            span(ng-click="getChildren(report.id)"){{ report.name }} ({{ report.id }})
+        td {{ report.open }}
+        td {{ report.who }}
+        td {{ report.user }}
+
